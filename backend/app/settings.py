@@ -2,6 +2,9 @@ from future.lifespan import Lifespan
 
 from app.plugins import MalSharePlugin
 from app.plugins import VirusTotalPlugin
+from app.plugins import MalwareBazaarPlugin
+from app.plugins import KasperskyPlugin
+from app.plugins import HybridAnalysisPlugin
 
 
 # Register app config (FIXME: should load from .env)
@@ -20,5 +23,6 @@ plugins = {
     "MalShare": MalSharePlugin(),
     "VirusTotal": VirusTotalPlugin(),
     "MalwareBazaar": MalwareBazaarPlugin(),
-    "Kaspersky": KasperskyPlugin()
+    "Kaspersky": KasperskyPlugin(),
+    "HybridAnalysis": HybridAnalysisPlugin()
 }
