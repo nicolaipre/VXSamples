@@ -73,7 +73,7 @@
                   class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 rounded text-xs font-medium flex items-center"
                 >
                   <Download class="w-3 h-3 mx-1" />
-                  Downloadable
+                  <span class="mr-2">Downloadable</span>
                 </span>
               </div>
 
@@ -525,5 +525,13 @@ const getDetectionColor = (rate: string | undefined) => {
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 </style>

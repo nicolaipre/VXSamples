@@ -8,6 +8,20 @@ Search across multiple threat intelligence sources to identify file samples and 
 
 Test hash: 0dea6f77da9bdfd6985c3cd30c6c174d791d106ce55dd5f57a2f212ab5477c67
 
+https://github.com/Neo23x0/munin
+
+---
+
+Dead services:
+
+- http://malwr.com/
+- https://spyralscanner.net/
+- https://antiscan.me/
+- http://nodistribute.com/
+- http://www.virusimune.com.br/
+- https://avbox.info/
+- https://dyncheck.com/
+
 ---
 
 ## Recommended IDE Setup

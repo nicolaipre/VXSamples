@@ -2,13 +2,18 @@ from future.controllers import Controller
 from future.requests import Request
 from future.responses import JSONResponse
 from app.settings import plugins
+import json
 
 
 class MainController(Controller):
     async def lookup(request: Request):
-        # plugin = plugins["VirusTotal"]
-        # response = {"result": result}
-        input_hash = "0dea6f77da9bdfd6985c3cd30c6c174d791d106ce55dd5f57a2f212ab5477c67"
+        body = await request.body()
+        json_body = json.loads(body)
+        input_hash = json_body["hash"]
+        plugin = plugins["VirusTotal"]
+        result = plugin.lookup(input_hash)
+        print(result)
+
         response = {
             f"hash": f"{input_hash}",
             "matches": [
