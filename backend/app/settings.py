@@ -5,6 +5,7 @@ from app.plugins import VirusTotalPlugin
 from app.plugins import MalwareBazaarPlugin
 from app.plugins import KasperskyPlugin
 from app.plugins import HybridAnalysisPlugin
+from app.plugins import AnyRunPlugin
 
 
 # Register app config (FIXME: should load from .env)
@@ -24,5 +25,6 @@ plugins = {
     "VirusTotal": VirusTotalPlugin(),
     "MalwareBazaar": MalwareBazaarPlugin(),
     "Kaspersky": KasperskyPlugin(),
-    "HybridAnalysis": HybridAnalysisPlugin()
+    "HybridAnalysis": HybridAnalysisPlugin(),
+    "AnyRun": AnyRunPlugin()
 }
