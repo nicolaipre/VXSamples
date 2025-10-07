@@ -1,0 +1,18 @@
+[project]
+name = "vxsamplesbackend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "nicolaipre",email = "16032412+nicolaipre@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "future @ git+https://github.com/Defendinary/future",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
