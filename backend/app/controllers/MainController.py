@@ -24,7 +24,9 @@ class MainController(Controller):
         return JSONResponse(response)
 
     def anyrun(request: Request):
+        # input_hash = request.
         plugin = plugins["AnyRun"]
+        result = plugin.lookup(input_hash)
         response = {"result": result}
         return JSONResponse(response)
 
@@ -77,4 +79,3 @@ class MainController(Controller):
         plugin = plugins["HuntIO"]
         response = {"result": result}
         return JSONResponse(response)
-
