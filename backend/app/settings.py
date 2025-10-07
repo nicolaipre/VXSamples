@@ -1,14 +1,19 @@
 from future.lifespan import Lifespan
 
-from app.plugins import MalSharePlugin
-from app.plugins import VirusTotalPlugin
-from app.plugins import MalwareBazaarPlugin
-from app.plugins import KasperskyPlugin
-from app.plugins import HybridAnalysisPlugin
-from app.plugins import AnyRunPlugin
-from app.plugins import TriagePlugin
-from app.plugins import MetaDefenderPlugin
-from app.plugins import ThreatFoxPlugin
+from app.plugins import (
+    MalSharePlugin,
+    VirusTotalPlugin,
+    MalwareBazaarPlugin,
+    KasperskyPlugin,
+    HybridAnalysisPlugin,
+    AnyRunPlugin,
+    TriagePlugin,
+    MetaDefenderPlugin,
+    ThreatFoxPlugin,
+    BFKPlugin,
+    ELFDigestPlugin,
+    HuntIOPlugin
+)
 
 
 # Register app config (FIXME: should load from .env)
@@ -32,5 +37,8 @@ plugins = {
     "AnyRun": AnyRunPlugin(),
     "Triage": TriagePlugin(),
     "MetaDefender": MetaDefenderPlugin(),
-    "ThreatFox": ThreatFoxPlugin()
+    "ThreatFox": ThreatFoxPlugin(),
+    "BFK": BFKPlugin(),
+    "ELFDigest": ELFDigestPlugin(),
+    "HuntIO": HuntIOPlugin()
 }
