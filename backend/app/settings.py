@@ -6,6 +6,7 @@ from app.plugins import MalwareBazaarPlugin
 from app.plugins import KasperskyPlugin
 from app.plugins import HybridAnalysisPlugin
 from app.plugins import AnyRunPlugin
+from app.plugins import TriagePlugin
 
 
 # Register app config (FIXME: should load from .env)
@@ -26,5 +27,6 @@ plugins = {
     "MalwareBazaar": MalwareBazaarPlugin(),
     "Kaspersky": KasperskyPlugin(),
     "HybridAnalysis": HybridAnalysisPlugin(),
-    "AnyRun": AnyRunPlugin()
+    "AnyRun": AnyRunPlugin(),
+    "Triage": TriagePlugin()
 }
