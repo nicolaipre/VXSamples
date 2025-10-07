@@ -67,3 +67,23 @@ class MainController(Controller):
         response = {"result": result}
         return JSONResponse(response)
 
+    def bfk(request: Request):
+
+        plugin = plugins["BFK"]
+
+        response = {"result": result}
+        return JSONResponse(response)
+
+    def elfdigest(request: Request):
+
+        plugin = plugins["ELFDigest"]
+
+        response = {"result": result}
+        return JSONResponse(response)
+
+    def huntio(request: Request):
+
+        plugin = plugins["HuntIO"]
+
+        response = {"result": result}
+        return JSONResponse(response)
