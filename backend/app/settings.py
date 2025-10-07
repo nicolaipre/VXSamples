@@ -19,5 +19,6 @@ lifespan = Lifespan(startup_tasks=[], shutdown_tasks=[], cron_tasks=[])
 plugins = {
     "MalShare": MalSharePlugin(),
     "VirusTotal": VirusTotalPlugin(),
-    "MalwareBazaar": MalwareBazaarPlugin()
+    "MalwareBazaar": MalwareBazaarPlugin(),
+    "Kaspersky": KasperskyPlugin()
 }
