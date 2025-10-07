@@ -8,6 +8,7 @@ from app.plugins import HybridAnalysisPlugin
 from app.plugins import AnyRunPlugin
 from app.plugins import TriagePlugin
 from app.plugins import MetaDefenderPlugin
+from app.plugins import ThreatFoxPlugin
 
 
 # Register app config (FIXME: should load from .env)
@@ -30,5 +31,6 @@ plugins = {
     "HybridAnalysis": HybridAnalysisPlugin(),
     "AnyRun": AnyRunPlugin(),
     "Triage": TriagePlugin(),
-    "MetaDefender": MetaDefenderPlugin()
+    "MetaDefender": MetaDefenderPlugin(),
+    "ThreatFox": ThreatFoxPlugin()
 }
