@@ -1,7 +1,19 @@
 from future.lifespan import Lifespan
 
-from app.plugins import MalSharePlugin
-from app.plugins import VirusTotalPlugin
+from app.plugins import (
+    MalSharePlugin,
+    VirusTotalPlugin,
+    MalwareBazaarPlugin,
+    KasperskyPlugin,
+    HybridAnalysisPlugin,
+    AnyRunPlugin,
+    TriagePlugin,
+    MetaDefenderPlugin,
+    ThreatFoxPlugin,
+    BFKPlugin,
+    ELFDigestPlugin,
+    HuntIOPlugin
+)
 
 
 # Register app config (FIXME: should load from .env)
@@ -17,6 +29,16 @@ lifespan = Lifespan(startup_tasks=[], shutdown_tasks=[], cron_tasks=[])
 
 # Registered plugins
 plugins = {
-    # "MalShare": MalSharePlugin(),
-    # "VirusTotal": VirusTotalPlugin()
+    "MalShare": MalSharePlugin(),
+    "VirusTotal": VirusTotalPlugin(),
+    "MalwareBazaar": MalwareBazaarPlugin(),
+    "Kaspersky": KasperskyPlugin(),
+    "HybridAnalysis": HybridAnalysisPlugin(),
+    "AnyRun": AnyRunPlugin(),
+    "Triage": TriagePlugin(),
+    "MetaDefender": MetaDefenderPlugin(),
+    "ThreatFox": ThreatFoxPlugin(),
+    "BFK": BFKPlugin(),
+    "ELFDigest": ELFDigestPlugin(),
+    "HuntIO": HuntIOPlugin()
 }
