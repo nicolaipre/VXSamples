@@ -1,0 +1,23 @@
+services:
+  devcontainer:
+    hostname: "vxsamples.com"
+    container_name: devcontainer-vxsamples
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Europe/Oslo
+      #- TESTENV="lol"
+      #- HTTP_PROXY="http:///squid.dmz.domain.no:3128"
+      #- HTTPS_PROXY="http:///squid.dmz.domain.no:3128"
+      #- NO_PROXY="localhost,127.0.0.1,.domain.no,.intern.domain.no"
+      #- VARIANT="3.12"
+      #- NODE_VERSION="none"
+    volumes:
+      - ../..:/workspaces:cached      
+    ports:
+      - "0.0.0.0:5173:5173"
+      - "0.0.0.0:9000:9000"
+    init: true
+    command: sleep infinity
+    #network_mode: service:db
