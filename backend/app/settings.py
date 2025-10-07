@@ -7,6 +7,7 @@ from app.plugins import KasperskyPlugin
 from app.plugins import HybridAnalysisPlugin
 from app.plugins import AnyRunPlugin
 from app.plugins import TriagePlugin
+from app.plugins import MetaDefenderPlugin
 
 
 # Register app config (FIXME: should load from .env)
@@ -28,5 +29,6 @@ plugins = {
     "Kaspersky": KasperskyPlugin(),
     "HybridAnalysis": HybridAnalysisPlugin(),
     "AnyRun": AnyRunPlugin(),
-    "Triage": TriagePlugin()
+    "Triage": TriagePlugin(),
+    "MetaDefender": MetaDefenderPlugin()
 }
