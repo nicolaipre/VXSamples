@@ -5,7 +5,7 @@
         <div
           class="w-8 h-8 bg-emerald-500/10 border border-emerald-500/30 rounded flex items-center justify-center"
         >
-          <Shield class="w-5 h-5 text-emerald-500" />
+          <Shield class="w-5 h-5 text-emerald-500 m-0.5" />
         </div>
         <h1 class="text-xl font-semibold text-white">VXSamples</h1>
       </div>

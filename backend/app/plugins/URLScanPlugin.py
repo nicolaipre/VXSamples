@@ -4,6 +4,8 @@ from future.plugins import Plugin
 
 # https://urlscan.io/api/
 
+# https://urlscan.io/docs/search/
+
 
 class URLScanPlugin(Plugin):
     def __init__(self):

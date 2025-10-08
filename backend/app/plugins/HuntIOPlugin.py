@@ -6,6 +6,9 @@ import requests
 
 class HuntIOPlugin(Plugin):
     def __init__(self):
+        pass
+
+    def lookup(self, hash: str):
         url = "https://api.hunt.io/v1/attackcapture/download-zip-file"
         headers = {"accept": "application/json"}
         response = requests.get(url, headers=headers)

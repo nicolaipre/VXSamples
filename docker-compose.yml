@@ -1,33 +1,32 @@
 services:
-  frontend:
+  vxsamples-frontend:
     image: nginx:alpine
-    container_name: vxsamples-frontend
-    ports:
-      - "80:80"
-      - "443:443"
+    hostname: "vxsamples-frontend"
+    container_name: "vxsamples-frontend"
+    restart: always
     volumes:
       - ./frontend/dist:/usr/share/nginx/html:ro
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      #- ./ssl:/etc/nginx/ssl:ro
-    #depends_on:
-    #  - backend
-    restart: unless-stopped
+    ports:
+      - "0.0.0.0:80:80/tcp"
+    depends_on:
+      - vxsamples-backend
     networks:
       - vxsamples-network
 
-  backend:
+  vxsamples-backend:
     image: python:3.13-slim
     container_name: vxsamples-backend
+    working_dir: /app
     environment:
       - TZ=Europe/Oslo
       #- PYTHONPATH=/app
-      #- FLASK_ENV=production
     volumes:
       - ./backend:/app
     restart: unless-stopped
     networks:
       - vxsamples-network
-    command: cd /app && poetry install && poetry run python run.py
+    command: sh -c "pip install poetry && poetry install && poetry run python run.py"
 
 networks:
   vxsamples-network:

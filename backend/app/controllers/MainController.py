@@ -12,7 +12,7 @@ class MainController(Controller):
         input_hash = json_body["hash"]
         plugin = plugins["VirusTotal"]
         result = plugin.lookup(input_hash)
-        print(result)
+        # print(result)
 
         response = {
             f"hash": f"{input_hash}",
